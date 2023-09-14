@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
@@ -42,11 +43,10 @@ io.on("connection", (socket) => {
         messageList.push(data);
         io.emit('receivedMessage', messageList);
     });
-
 })
 
 
 
 
-
-server.listen('4001', () => console.log('Server is running on port 4001 🚀'));
+const { PORT } = process.env;
+server.listen(PORT, () => console.log('Server is running on port 4001 🚀'));
