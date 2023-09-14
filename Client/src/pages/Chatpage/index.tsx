@@ -6,7 +6,7 @@ import { Messages } from '../../components/Message';
 import { io } from "socket.io-client";
 import { MessagesContext } from '../../contexts/MessagesContext';
 
-export const socket = io('http://localhost:4001');
+export const socket = io('https://chat-zxha.onrender.com');
 
 interface dataType{
     author: string,
