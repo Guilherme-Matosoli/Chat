@@ -11,7 +11,7 @@ export const socket = io('https://chat-zxha.onrender.com');
 interface dataType{
     author: string,
     message: string
-}
+};
 
 export const Chatpage = () => {
 
