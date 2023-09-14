@@ -16,6 +16,10 @@ const io = new Server(server, {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send("Bip bop bip bip bop")
+})
+
 interface dataType{
     author: string,
     message: string
@@ -44,8 +48,6 @@ io.on("connection", (socket) => {
         io.emit('receivedMessage', messageList);
     });
 })
-
-
 
 
 const { PORT } = process.env;
